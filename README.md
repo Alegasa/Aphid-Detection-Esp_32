@@ -15,7 +15,7 @@ Data Augmentation: Se aplican transformaciones aleatorias (RandomFlip horizontal
 # 2. Arquitectura "All-Conv" (Sin MaxPooling)
 Para optimizar el uso de memoria RAM en el ESP32, se eliminaron las tradicionales capas de MaxPooling. En su lugar, la reducción espacial se logra utilizando convoluciones con pasos largos (strides=2).
 
-#3. Configuración del Entrenamiento
+# 3. Configuración del Entrenamiento
 El proceso de entrenamiento base se realiza en formato de punto flotante de 32 bits (Float32).
 
 Optimizador: Adam, con una tasa de aprendizaje (Learning Rate) amigable de 0.0005 para evitar saltos bruscos en esta red profunda.
