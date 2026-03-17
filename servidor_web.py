@@ -10,7 +10,7 @@ app = Flask(__name__)
 CARPETA_TEST = "DS-Hojas-Prueba"
 IMG_HEIGHT = 96
 IMG_WIDTH = 96
-ARCHIVO_CSV = "resultados_detallados.csv"
+ARCHIVO_CSV = "resultados.csv"
 
 # Leer fotos y determinar clase real por el nombre de la carpeta
 lista_fotos = []

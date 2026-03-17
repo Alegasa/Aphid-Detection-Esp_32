@@ -6,7 +6,7 @@ import random
 from sklearn.metrics import accuracy_score
 
 # --- 0. EL CANDADO ABSOLUTO (Cambia este número para cada prueba) ---
-SEMILLA = 42
+SEMILLA = 154
 os.environ['PYTHONHASHSEED'] = str(SEMILLA)
 random.seed(SEMILLA)
 np.random.seed(SEMILLA)
