@@ -6,7 +6,7 @@ import random
 from sklearn.metrics import accuracy_score
 
 # --- 0. EL CANDADO ABSOLUTO (Cambia este número para cada prueba) ---
-SEMILLA = 154
+SEMILLA = 7
 os.environ['PYTHONHASHSEED'] = str(SEMILLA)
 random.seed(SEMILLA)
 np.random.seed(SEMILLA)
@@ -80,6 +80,12 @@ loss, accuracy = model.evaluate(val_ds, verbose=0)
 print("-" * 50)
 print(f"✅ Accuracy ORIGINAL FLOTANTE (Test Data): {accuracy:.4f} ({(accuracy*100):.2f}%)")
 print("-" * 50)
+
+# =========================================================================
+nombre_modelo_original = 'modelo_original_.h5'
+model.save(nombre_modelo_original)
+print(f"\n💾 ¡Modelo original guardado exitosamente como: {nombre_modelo_original}!")
+# =========================================================================
 
 # --- 6. CUANTIZACIÓN A INT8 ---
 print("\n⚖️ CUANTIZANDO MODELO A INT8 PARA ESP32 / ESP-EYE...")
